@@ -10,7 +10,7 @@ public class Main {
 
 		GamePanel gp = new GamePanel(keyH, mouseH);
 
-		System.out.println("input your name: \n");
+		System.out.println("Input your name: \n");
 
 		Scanner scanner = new Scanner(System.in);
 

@@ -10,7 +10,7 @@ import java.util.Objects;
 
 public class GamePanel extends JPanel {
 
-	public String name = "daddy";
+	public String name = "";
 
 	public int FPS = 60;
 	public int TICK_RATE = 40;
@@ -73,7 +73,7 @@ public class GamePanel extends JPanel {
 			medkitImage = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/img_3.png")));
 			slurpImage = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/img_4.png")));
 		} catch (IOException e) {
-			System.out.println("image loading failed lol: "+e);
+			System.out.println("image loading failed: "+e);
 		}
 		this.setPreferredSize(new Dimension(screenWidth, screenHeight));
 
@@ -81,15 +81,10 @@ public class GamePanel extends JPanel {
 		zombies.add(new Zombie(200, 350));
 		zombies.add(new Zombie(400, 200));
 		zombies.add(new Zombie(1000, 350));
-
-		System.out.println(medKit.x+" "+medKit.y+" ");
-		System.out.println(waterMellon.x+" "+waterMellon.y+" "+waterMellon.used);
-		System.out.println(waterMellon2.x+" "+waterMellon2.y+" "+waterMellon2.util);
 	}
 
 	public void startRepaintThread() {
 		repaintThread = new Thread(() -> {
-			System.out.println("Repaint thread running");
 
 			long lastTime = System.nanoTime();
 			long drawInterval = 1_000_000_000 / FPS;
@@ -110,7 +105,6 @@ public class GamePanel extends JPanel {
 	}
 	public void startTickThread() {
 		tickThread = new Thread(() -> {
-			System.out.println("Tick thread running");
 
 			long lastTime = System.nanoTime();
 			tickInterval = 1_000_000_000L / TICK_RATE;

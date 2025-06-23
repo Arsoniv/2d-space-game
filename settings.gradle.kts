@@ -1,1 +1,1 @@
-rootProject.name = "eclipse-of-fate-game"
+rootProject.name = "2d-space-game"
