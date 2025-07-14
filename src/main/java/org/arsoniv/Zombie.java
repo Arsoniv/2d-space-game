@@ -9,6 +9,7 @@ public class Zombie extends Entity{
 	public Util util = new Util();
 
 	public Zombie(int xIn, int yIn) {
+		// init the inherited entity values
 		color = Color.black;
 		health = 55;
 
@@ -22,6 +23,7 @@ public class Zombie extends Entity{
 		height = 35;
 	}
 
+	//move the zombie toward the player's position
 	public void moveTowardsPlayer(int playerX, int playerY, ArrayList<Entity> entities) {
 
 		int oldX = (int) x;

@@ -4,6 +4,7 @@ import java.awt.event.MouseEvent;
 
 public class MouseListener implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener {
 
+	// mouse info:
 	public boolean newPress = false;
 	public int xLast = 0;
 	public int yLast = 0;
@@ -21,6 +22,7 @@ public class MouseListener implements java.awt.event.MouseListener, java.awt.eve
 
 	@Override
 	public void mousePressed(MouseEvent mouseEvent) {
+		// set mouse info
 		newPress = true;
 		mouseDown = true;
 		xLast = mouseEvent.getX();
@@ -46,6 +48,7 @@ public class MouseListener implements java.awt.event.MouseListener, java.awt.eve
 
 	@Override
 	public void mouseDragged(MouseEvent mouseEvent) {
+		// set mouse info
 		xDrag = mouseEvent.getX();
 		yDrag = mouseEvent.getY();
 	}

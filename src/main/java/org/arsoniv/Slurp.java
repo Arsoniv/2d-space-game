@@ -13,6 +13,7 @@ public class Slurp extends Entity{
 	public int screenHeight;
 
 	public Slurp(int screenWidthI, int screenHeightI) {
+		// init the inherited entity values
 		screenWidth = screenWidthI;
 		screenHeight = screenHeightI;
 		x = (int) ((Math.random() * (screenWidth - 200) + 100));

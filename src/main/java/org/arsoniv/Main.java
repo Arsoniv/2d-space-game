@@ -8,8 +8,10 @@ public class Main {
 		KeyHandler keyH = new KeyHandler();
 		MouseListener mouseH = new MouseListener();
 
+		// make a new gamePanel object
 		GamePanel gp = new GamePanel(keyH, mouseH);
 
+		// name input
 		System.out.println("Input your name: \n");
 
 		Scanner scanner = new Scanner(System.in);
@@ -32,6 +34,7 @@ public class Main {
 		gp.startTickThread();
 		gp.startRepaintThread();
 
+		// call update and repaint so that the player is visible
 		gp.update();
 		gp.repaint();
 

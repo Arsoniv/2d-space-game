@@ -5,6 +5,8 @@ import java.awt.event.KeyListener;
 
 public class KeyHandler implements KeyListener {
 
+
+	//boolean for each key
 	public boolean w, a, s, d, esc, space = false;
 
 	@Override
@@ -14,6 +16,7 @@ public class KeyHandler implements KeyListener {
 
 	@Override
 	public void keyPressed(KeyEvent keyEvent) {
+		//get keycode for the event
 		final int key = keyEvent.getKeyCode();
 
 		if (key == KeyEvent.VK_W) {
@@ -38,6 +41,7 @@ public class KeyHandler implements KeyListener {
 
 	@Override
 	public void keyReleased(KeyEvent keyEvent) {
+		//get keycode for the event
 		final int key = keyEvent.getKeyCode();
 		if (key == KeyEvent.VK_W) {
 			w = false;

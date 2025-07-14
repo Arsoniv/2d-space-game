@@ -1,7 +1,7 @@
 package org.arsoniv;
 
 public class Util {
-
+	//function to check if there's a intersect between 2 entities.
 	public boolean checkEntityIntersect(Entity e1, Entity e2, boolean shouldCountReach1, boolean shouldCountReach2) {
 		int r1 = shouldCountReach1 ? e1.reach : 0;
 		int r2 = shouldCountReach2 ? e2.reach : 0;

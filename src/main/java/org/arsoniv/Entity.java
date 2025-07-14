@@ -17,8 +17,10 @@ public class Entity {
 	public int damage = 2;
 
 	public Point getInterpolatedPosition(float alpha) {
+		// alpha represents how far between ticks the frame is.
 		if (alpha > 1.0f) alpha = 1.0f;
 
+		//use alpha to position the entity between ticks
 		int xInterpolated = (int) (xPrev + (x - xPrev) * alpha);
 		int yInterpolated = (int) (yPrev + (y - yPrev) * alpha);
 

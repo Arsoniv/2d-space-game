@@ -13,6 +13,7 @@ public class MedKit extends Entity{
 	public int screenHeight;
 
 	public MedKit(int screenWidthI, int screenHeightI) {
+		// init the inherited entity values
 		screenWidth = screenWidthI;
 		screenHeight = screenHeightI;
 		x = (int) ((Math.random() * (screenWidth - 200) + 100));

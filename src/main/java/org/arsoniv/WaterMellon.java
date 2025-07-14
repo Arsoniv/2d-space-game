@@ -10,6 +10,7 @@ public class WaterMellon extends Entity{
 	public boolean used = false;
 
 	public WaterMellon(int screenWidth, int screenHeight) {
+		// init the inherited entity values
 		x = (int) ((Math.random() * (screenWidth - 200) + 100));
 		y = (int) ((Math.random() * (screenHeight - 200) + 100));
 		xPrev = x;

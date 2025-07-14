@@ -12,6 +12,7 @@ public class Player extends Entity{
 	Util util = new Util();
 
 	public Player() {
+		// init the inherited entity values
 		this.speed = 5;
 		this.color = Color.blue;
 
